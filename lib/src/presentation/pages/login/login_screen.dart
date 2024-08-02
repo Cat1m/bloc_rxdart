@@ -16,49 +16,67 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('Login')),
-        body: BlocConsumer<AuthBloc, AuthState>(
-          listener: (context, state) {
-            state.maybeWhen(
-              authenticated: (_) => context.go('/home'),
-              error: (message) => ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(message)),
-              ),
-              orElse: () {},
-            );
-          },
-          builder: (context, state) {
-            return Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextField(
-                    controller: _usernameController,
-                    decoration: const InputDecoration(labelText: 'Username'),
-                  ),
-                  const SizedBox(height: 16),
-                  TextField(
-                    controller: _passwordController,
-                    decoration: const InputDecoration(labelText: 'Password'),
-                    obscureText: true,
-                  ),
-                  const SizedBox(height: 24),
-                  state.maybeWhen(
-                    orElse: () => ElevatedButton(
-                      onPressed: () {
-                        context.read<AuthBloc>().add(AuthEvent.login(
-                            _usernameController.text,
-                            _passwordController.text));
-                      },
+    return BlocConsumer<AuthBloc, AuthState>(
+      listener: (context, state) {
+        state.maybeWhen(
+          authenticated: (_) => context.go('/home'),
+          error: (message) => ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(message)),
+          ),
+          orElse: () {},
+        );
+      },
+      builder: (context, state) {
+        return Stack(
+          children: [
+            Scaffold(
+              appBar: AppBar(title: const Text('Login')),
+              body: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextField(
+                      controller: _usernameController,
+                      decoration: const InputDecoration(labelText: 'Username'),
+                    ),
+                    const SizedBox(height: 16),
+                    TextField(
+                      controller: _passwordController,
+                      decoration: const InputDecoration(labelText: 'Password'),
+                      obscureText: true,
+                    ),
+                    const SizedBox(height: 24),
+                    ElevatedButton(
+                      onPressed: state.maybeWhen(
+                        loading: () => null,
+                        orElse: () => () {
+                          context.read<AuthBloc>().add(AuthEvent.login(
+                              _usernameController.text,
+                              _passwordController.text));
+                        },
+                      ),
                       child: const Text('Login'),
                     ),
-                  )
-                ],
+                  ],
+                ),
               ),
-            );
-          },
-        ));
+            ),
+            if (state.maybeWhen(
+              loading: () => true,
+              orElse: () => false,
+            ))
+              Positioned.fill(
+                child: Container(
+                  color: Colors.white.withOpacity(0.5),
+                  child: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
+    );
   }
 }

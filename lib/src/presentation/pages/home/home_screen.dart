@@ -8,35 +8,65 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        actions: [
-          TextButton(
-            onPressed: () {
-              context.read<AuthBloc>().add(const AuthEvent.logout());
-              context.go('/login');
-            },
-            child: const Text("Đăng xuất"),
-          )
-        ],
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return BlocConsumer<AuthBloc, AuthState>(
+      listener: (context, state) {
+        state.maybeWhen(
+          unauthenticated: () => context.go('/login'),
+          orElse: () {},
+        );
+      },
+      builder: (context, state) {
+        return Stack(
           children: [
-            ElevatedButton(
-              onPressed: () => context.go('/home/posts'),
-              child: const Text('View Posts'),
+            Scaffold(
+              appBar: AppBar(
+                title: const Text('Home'),
+                actions: [
+                  TextButton(
+                    onPressed: state.maybeWhen(
+                      loading: () => null,
+                      orElse: () => () => _handleLogout(context),
+                    ),
+                    child: const Text("Đăng xuất"),
+                  )
+                ],
+              ),
+              body: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => context.go('/home/posts'),
+                      child: const Text('View Posts'),
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () => context.go('/home/photos'),
+                      child: const Text('View Photos'),
+                    ),
+                  ],
+                ),
+              ),
             ),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () => context.go('/home/photos'),
-              child: const Text('View Photos'),
-            ),
+            if (state.maybeWhen(
+              loading: () => true,
+              orElse: () => false,
+            ))
+              Positioned.fill(
+                child: Container(
+                  color: Colors.white.withOpacity(0.5),
+                  child: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                ),
+              ),
           ],
-        ),
-      ),
+        );
+      },
     );
+  }
+
+  void _handleLogout(BuildContext context) {
+    context.read<AuthBloc>().add(const AuthEvent.logout());
   }
 }

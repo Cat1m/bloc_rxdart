@@ -5,7 +5,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:bloc_rxdart/src/data/datasources/post_api_service.dart' as _i2;
+import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart'
+    as _i2;
 import 'package:bloc_rxdart/src/domain/models/photo/photo.dart' as _i5;
 import 'package:bloc_rxdart/src/domain/models/post/post.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;

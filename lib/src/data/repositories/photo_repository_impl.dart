@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:bloc_rxdart/src/data/datasources/post_api_service.dart';
+import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart';
 import 'package:bloc_rxdart/src/domain/models/photo/photo.dart';
 import 'package:bloc_rxdart/src/domain/repositories/photo_repository.dart';
 import 'package:rxdart/rxdart.dart';

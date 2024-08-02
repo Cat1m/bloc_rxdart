@@ -25,6 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Future<void> _onLogin(
       String username, String password, Emitter<AuthState> emit) async {
     emit(const AuthState.loading());
+    await Future.delayed(const Duration(seconds: 1));
     try {
       final user = await _authRepository.login(username, password);
       emit(AuthState.authenticated(user));
@@ -35,6 +36,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Future<void> _onLogout(Emitter<AuthState> emit) async {
     emit(const AuthState.loading());
+    await Future.delayed(const Duration(seconds: 1));
 
     try {
       await _authRepository.logout();
@@ -46,6 +48,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Future<void> _onCheckAuthStatus(Emitter<AuthState> emit) async {
     emit(const AuthState.loading());
+    await Future.delayed(const Duration(seconds: 1));
     try {
       final isLoggedIn = await _authRepository.isLoggedIn();
       if (isLoggedIn) {

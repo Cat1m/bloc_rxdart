@@ -1,20 +1,10 @@
-import 'package:bloc_rxdart/src/data/datasources/local/local_storage_service.dart';
-import 'package:bloc_rxdart/src/data/datasources/local/secure_storage_service.dart';
-import 'package:bloc_rxdart/src/data/datasources/local/shared_preferences_service.dart';
-import 'package:bloc_rxdart/src/data/repositories/auth_repository_impl.dart';
-import 'package:bloc_rxdart/src/data/repositories/photo_repository_impl.dart';
-import 'package:bloc_rxdart/src/data/repositories/post_repository_impl.dart';
-import 'package:bloc_rxdart/src/domain/repositories/auth_repository.dart';
-import 'package:bloc_rxdart/src/domain/repositories/photo_repository.dart';
-import 'package:bloc_rxdart/src/presentation/blocs/photo/photo_bloc.dart';
-import 'package:bloc_rxdart/src/presentation/blocs/post/post_bloc.dart';
 import 'package:bloc_rxdart/src/utils/network/dio_factory.dart';
 import 'package:get_it/get_it.dart';
-
-import '../../data/datasources/dummy_json_api.dart/dummy_json_api_service.dart';
-import '../../data/datasources/post_api_service.dart';
-import '../../domain/repositories/post_repository.dart';
-import '../../presentation/blocs/auth/auth_bloc.dart';
+import '../../data/datasources/local/local.dart';
+import '../../data/datasources/remote/remote.dart';
+import '../../data/repositories/repositories_impl.dart';
+import '../../domain/repositories/repositories.dart';
+import '../../presentation/blocs/blocs.dart';
 
 Future<void> setupDependencies() async {
   final getIt = GetIt.instance;

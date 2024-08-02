@@ -9,7 +9,7 @@ import 'package:bloc_rxdart/src/utils/constants/storage_keys.dart';
 import 'package:bloc_rxdart/src/utils/error/error_handler.dart';
 
 import '../../domain/repositories/auth_repository.dart';
-import '../datasources/dummy_json_api.dart/dummy_json_api_service.dart';
+import '../datasources/remote/dummy_json_api.dart/dummy_json_api_service.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final DummyJsonApiService _dummyJsonApiService;

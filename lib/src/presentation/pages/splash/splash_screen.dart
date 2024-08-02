@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -28,7 +30,11 @@ class _SplashScreenState extends State<SplashScreen> {
       listener: (context, state) {
         state.when(
           initial: () => {},
-          loading: () => {},
+          loading: () => {
+            const Center(
+              child: CircularProgressIndicator(),
+            )
+          },
           authenticated: (_) {
             context.go('/home');
           },
@@ -36,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context.go('/login');
           },
           error: (message) {
-            print('Error: $message');
+            log('Error: $message');
             context.go('/login');
           },
         );

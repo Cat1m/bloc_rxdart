@@ -24,7 +24,7 @@ dependencies:
   shared_preferences: ^2.3.1
   flutter_secure_storage: ^4.2.1
   encrypt: ^5.0.3
-  flutter_launcher_icons: ^0.13.1
+  # flutter_launcher_icons: ^0.13.1 // không cần gói này lên iconkitchen mà làm: https://icon.kitchen/
   # đổi tên: rename setAppName --targets ios,android --value "YourAppName"
   # đổi BundleId: rename setBundleId --targets android --value "com.example.bundleId"
   rename: ^3.0.2
@@ -48,12 +48,12 @@ flutter:
   assets:
     - assets\icon\gengar_icon.jpg
 
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  remove_alpha_ios: true
-  image_path: "assets/icon/gengar_icon.jpg"
-  #flutter pub run flutter_launcher_icons
+# flutter_launcher_icons:
+#   android: "launcher_icon"
+#   ios: true
+#   remove_alpha_ios: true
+#   image_path: "assets/icon/gengar_icon.jpg"
+#   #flutter pub run flutter_launcher_icons
 
   
   

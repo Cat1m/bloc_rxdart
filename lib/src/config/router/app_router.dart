@@ -1,10 +1,5 @@
-import 'package:bloc_rxdart/src/presentation/pages/photo/photo_list_page.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../presentation/pages/home/home_screen.dart';
-import '../../presentation/pages/login/login_screen.dart';
-import '../../presentation/pages/post/post_list_page.dart';
-import '../../presentation/pages/splash/splash_screen.dart';
+import '../../presentation/pages/pages.dart';
 
 class AppRouter {
   static final router = GoRouter(
