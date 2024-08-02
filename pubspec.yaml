@@ -25,6 +25,9 @@ dependencies:
   flutter_secure_storage: ^4.2.1
   encrypt: ^5.0.3
   flutter_launcher_icons: ^0.13.1
+  # đổi tên: rename setAppName --targets ios,android --value "YourAppName"
+  # đổi BundleId: rename setBundleId --targets android --value "com.example.bundleId"
+  rename: ^3.0.2
 
 dev_dependencies:
   flutter_test:

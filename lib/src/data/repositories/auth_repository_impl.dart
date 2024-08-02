@@ -68,6 +68,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       await _localStorage.remove(StorageKeys.token);
       await _localStorage.remove(StorageKeys.user);
+      log('đã xóa token vs user');
     } catch (e) {
       //! dùng tạm thôi chứ mình chưa viết trường hợp bắt lỗi cho tụi này
       //! ErrorHandler chỉ đang bắt lỗi cho dio là chính
