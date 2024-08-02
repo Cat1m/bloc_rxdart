@@ -34,7 +34,7 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^3.0.0
-  
+  #flutter pub run build_runner build --delete-conflicting-outputs
   build_runner: ^2.4.6
   freezed: ^2.4.2
   json_serializable: ^6.7.1
@@ -47,6 +47,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets\icon\gengar_icon.jpg
+
+    #xóa import không cần thiết: dart fix --apply --code=unused_import
 
 # flutter_launcher_icons:
 #   android: "launcher_icon"

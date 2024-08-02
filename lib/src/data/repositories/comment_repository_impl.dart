@@ -1,20 +1,19 @@
 import 'dart:developer';
 
 import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart';
-import 'package:bloc_rxdart/src/domain/models/photo/photo.dart';
-import 'package:bloc_rxdart/src/domain/repositories/photo_repository.dart';
+import 'package:bloc_rxdart/src/domain/models/comment/comment_model.dart';
+import 'package:bloc_rxdart/src/domain/repositories/comment_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../../utils/error/error_handler.dart';
 
-class PhotoRepositoryImpl implements PhotoRepository {
+class CommentRepositoryImpl implements CommentRepository {
   final PostApiService _apiService;
 
-  PhotoRepositoryImpl(this._apiService);
-
+  CommentRepositoryImpl(this._apiService);
   @override
-  Stream<List<Photo>> getPhotos() {
-    return Stream.fromFuture(_apiService.getPhotos())
+  Stream<List<CommentModel>> getComment() {
+    return Stream.fromFuture(_apiService.getComments())
         .onErrorResume((error, stackTrace) {
       log('Caught error in repository: $error');
       log('Stack trace: $stackTrace');

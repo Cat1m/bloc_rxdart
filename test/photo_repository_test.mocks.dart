@@ -7,8 +7,12 @@ import 'dart:async' as _i3;
 
 import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart'
     as _i2;
+import 'package:bloc_rxdart/src/domain/models/album/album_model.dart' as _i8;
+import 'package:bloc_rxdart/src/domain/models/comment/comment_model.dart'
+    as _i7;
 import 'package:bloc_rxdart/src/domain/models/photo/photo.dart' as _i5;
 import 'package:bloc_rxdart/src/domain/models/post/post.dart' as _i4;
+import 'package:bloc_rxdart/src/domain/models/todos/todos_model.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -49,4 +53,32 @@ class MockPostApiService extends _i1.Mock implements _i2.PostApiService {
         ),
         returnValue: _i3.Future<List<_i5.Photo>>.value(<_i5.Photo>[]),
       ) as _i3.Future<List<_i5.Photo>>);
+
+  @override
+  _i3.Future<List<_i6.TodosModel>> getTodos() => (super.noSuchMethod(
+        Invocation.method(
+          #getTodos,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i6.TodosModel>>.value(<_i6.TodosModel>[]),
+      ) as _i3.Future<List<_i6.TodosModel>>);
+
+  @override
+  _i3.Future<List<_i7.CommentModel>> getComments() => (super.noSuchMethod(
+        Invocation.method(
+          #getComments,
+          [],
+        ),
+        returnValue:
+            _i3.Future<List<_i7.CommentModel>>.value(<_i7.CommentModel>[]),
+      ) as _i3.Future<List<_i7.CommentModel>>);
+
+  @override
+  _i3.Future<List<_i8.AlbumModel>> getAlbums() => (super.noSuchMethod(
+        Invocation.method(
+          #getAlbums,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i8.AlbumModel>>.value(<_i8.AlbumModel>[]),
+      ) as _i3.Future<List<_i8.AlbumModel>>);
 }

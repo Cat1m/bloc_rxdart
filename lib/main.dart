@@ -1,7 +1,8 @@
+import 'package:bloc_rxdart/src/config/router/app_service.dart';
+import 'package:bloc_rxdart/src/presentation/blocs/combined/combined_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'src/config/router/app_router.dart';
 import 'src/config/themes/app_theme.dart';
 import 'src/core/di/dependency_injection.dart';
 import 'src/presentation/blocs/auth/auth_bloc.dart';
@@ -24,10 +25,11 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => GetIt.I<AuthBloc>()),
         BlocProvider(create: (_) => GetIt.I<PhotoBloc>()),
+        BlocProvider(create: (_) => GetIt.I<CombinedBloc>())
       ],
       child: MaterialApp.router(
         theme: AppTheme.lightTheme,
-        routerConfig: AppRouter.router,
+        routerConfig: AppServices.router,
       ),
     );
   }
