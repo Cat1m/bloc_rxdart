@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +31,14 @@ class PhotoListPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Expanded(
-                        child: Image.network(photo.thumbnailUrl),
+                        child: CachedNetworkImage(
+                          imageUrl: photo.thumbnailUrl,
+                          placeholder: (context, url) => const Center(
+                            child: CircularProgressIndicator(),
+                          ),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
+                        ),
                       ),
                       Text(photo.title,
                           maxLines: 2, overflow: TextOverflow.ellipsis),

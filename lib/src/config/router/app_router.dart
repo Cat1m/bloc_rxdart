@@ -1,3 +1,4 @@
+import 'package:bloc_rxdart/src/presentation/pages/user/user_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../presentation/pages/login/login_view_model.dart';
@@ -35,6 +36,10 @@ class AppRoutes {
         GoRoute(
           path: 'combined',
           builder: (context, state) => const CombinedScreen(),
+        ),
+        GoRoute(
+          path: 'user',
+          builder: (context, state) => const UserListScreen(),
         ),
       ],
     ),

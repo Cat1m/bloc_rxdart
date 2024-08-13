@@ -1,13 +1,15 @@
-import 'package:bloc_rxdart/src/config/router/app_router.dart';
 import 'package:bloc_rxdart/src/config/router/navigation_service.dart';
 import 'package:bloc_rxdart/src/data/repositories/album_repository_imple.dart';
 import 'package:bloc_rxdart/src/data/repositories/comment_repository_impl.dart';
 import 'package:bloc_rxdart/src/data/repositories/todos_repository_impl.dart';
+import 'package:bloc_rxdart/src/data/repositories/user_repository_impl.dart';
 import 'package:bloc_rxdart/src/domain/repositories/album_repository.dart';
 import 'package:bloc_rxdart/src/domain/repositories/comment_repository.dart';
 import 'package:bloc_rxdart/src/domain/repositories/todos_repository.dart';
+import 'package:bloc_rxdart/src/domain/repositories/user_repository.dart';
 import 'package:bloc_rxdart/src/presentation/blocs/combined/combined_bloc.dart';
 import 'package:bloc_rxdart/src/presentation/blocs/todos/todos_bloc.dart';
+import 'package:bloc_rxdart/src/presentation/blocs/user/user_bloc.dart';
 import 'package:bloc_rxdart/src/utils/network/dio_factory.dart';
 import 'package:get_it/get_it.dart';
 import '../../config/router/app_service.dart';
@@ -40,7 +42,7 @@ Future<void> setupDependencies() async {
 
   // Datasources
   final dio = await DioFactory.getDio();
-  getIt.registerLazySingleton(() => PostApiService(dio));
+  getIt.registerLazySingleton(() => JsonPlaceHolderApiService(dio));
 
   //API LOGIN
   final dummyApiDio = await DioFactory.getDio(baseUrl: "https://dummyjson.com");
@@ -48,21 +50,24 @@ Future<void> setupDependencies() async {
 
   //Đăng kí Repositories
   getIt.registerLazySingleton<PostRepository>(
-      () => PostRepositoryImpl(getIt<PostApiService>()));
+      () => PostRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
   getIt.registerLazySingleton<PhotoRepository>(
-      () => PhotoRepositoryImpl(getIt<PostApiService>()));
+      () => PhotoRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
   getIt.registerLazySingleton<AuthRepository>(
     () => AuthRepositoryImpl(
         getIt<DummyJsonApiService>(), getIt<LocalStorageService>()),
   );
 
   getIt.registerLazySingleton<TodosRepository>(
-      () => TodosRepositoryImpl(getIt<PostApiService>()));
+      () => TodosRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
 
   getIt.registerLazySingleton<AlbumRepository>(
-      () => AlbumRepositoryImple(getIt<PostApiService>()));
+      () => AlbumRepositoryImple(getIt<JsonPlaceHolderApiService>()));
   getIt.registerLazySingleton<CommentRepository>(
-      () => CommentRepositoryImpl(getIt<PostApiService>()));
+      () => CommentRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
+  // user
+  getIt.registerLazySingleton<UserRepository>(
+      () => UserRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
 
   //Đăng kí Blocs
   getIt.registerFactory(() => PostBloc(getIt<PostRepository>()));
@@ -73,7 +78,10 @@ Future<void> setupDependencies() async {
         getIt<AlbumRepository>(),
         getIt<CommentRepository>(),
         getIt<PostRepository>(),
+        getIt<UserRepository>(),
+        getIt<PhotoRepository>(),
       ));
+  getIt.registerFactory(() => UserBloc(getIt<UserRepository>()));
 }
 
 //! Sử dụng với một baseUrl khác

@@ -8,7 +8,7 @@ import 'package:rxdart/rxdart.dart';
 import '../../utils/error/error_handler.dart';
 
 class TodosRepositoryImpl implements TodosRepository {
-  final PostApiService _apiService;
+  final JsonPlaceHolderApiService _apiService;
 
   TodosRepositoryImpl(this._apiService);
 

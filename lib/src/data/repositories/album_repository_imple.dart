@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart';
+import 'package:bloc_rxdart/src/data/datasources/remote/json_place_holder_api.dart/json_place_holder_api_service.dart';
 import 'package:bloc_rxdart/src/domain/models/album/album_model.dart';
 import 'package:bloc_rxdart/src/domain/repositories/album_repository.dart';
 import 'package:rxdart/rxdart.dart';
@@ -8,7 +8,7 @@ import 'package:rxdart/rxdart.dart';
 import '../../utils/error/error_handler.dart';
 
 class AlbumRepositoryImple implements AlbumRepository {
-  final PostApiService _apiService;
+  final JsonPlaceHolderApiService _apiService;
 
   AlbumRepositoryImple(this._apiService);
   @override

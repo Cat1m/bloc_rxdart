@@ -28,6 +28,7 @@ dependencies:
   # đổi tên: rename setAppName --targets ios,android --value "YourAppName"
   # đổi BundleId: rename setBundleId --targets android --value "com.example.bundleId"
   rename: ^3.0.2
+  cached_network_image: ^3.4.0
 
 dev_dependencies:
   flutter_test:
@@ -47,15 +48,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets\icon\gengar_icon.jpg
-
     #xóa import không cần thiết: dart fix --apply --code=unused_import
-
-# flutter_launcher_icons:
-#   android: "launcher_icon"
-#   ios: true
-#   remove_alpha_ios: true
-#   image_path: "assets/icon/gengar_icon.jpg"
-#   #flutter pub run flutter_launcher_icons
 
   
   

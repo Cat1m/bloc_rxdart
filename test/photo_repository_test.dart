@@ -1,4 +1,4 @@
-import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart';
+import 'package:bloc_rxdart/src/data/datasources/remote/json_place_holder_api.dart/json_place_holder_api_service.dart';
 import 'package:bloc_rxdart/src/data/repositories/photo_repository_impl.dart';
 import 'package:bloc_rxdart/src/domain/repositories/photo_repository.dart';
 import 'package:bloc_rxdart/src/utils/error/error_handler.dart';
@@ -7,15 +7,15 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
-@GenerateMocks([PostApiService])
+@GenerateMocks([JsonPlaceHolderApiService])
 import 'photo_repository_test.mocks.dart';
 
 void main() {
-  late MockPostApiService mockPostApiService;
+  late MockJsonPlaceHolderApiService mockPostApiService;
   late PhotoRepository photoRepository;
 
   setUp(() {
-    mockPostApiService = MockPostApiService();
+    mockPostApiService = MockJsonPlaceHolderApiService();
     photoRepository = PhotoRepositoryImpl(mockPostApiService);
   });
 

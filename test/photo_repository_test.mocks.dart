@@ -5,7 +5,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:bloc_rxdart/src/data/datasources/remote/post_api.dart/post_api_service.dart'
+import 'package:bloc_rxdart/src/data/datasources/remote/json_place_holder_api.dart/json_place_holder_api_service.dart'
     as _i2;
 import 'package:bloc_rxdart/src/domain/models/album/album_model.dart' as _i8;
 import 'package:bloc_rxdart/src/domain/models/comment/comment_model.dart'
@@ -13,6 +13,7 @@ import 'package:bloc_rxdart/src/domain/models/comment/comment_model.dart'
 import 'package:bloc_rxdart/src/domain/models/photo/photo.dart' as _i5;
 import 'package:bloc_rxdart/src/domain/models/post/post.dart' as _i4;
 import 'package:bloc_rxdart/src/domain/models/todos/todos_model.dart' as _i6;
+import 'package:bloc_rxdart/src/domain/models/user/user_model.dart' as _i9;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -28,11 +29,12 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-/// A class which mocks [PostApiService].
+/// A class which mocks [JsonPlaceHolderApiService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPostApiService extends _i1.Mock implements _i2.PostApiService {
-  MockPostApiService() {
+class MockJsonPlaceHolderApiService extends _i1.Mock
+    implements _i2.JsonPlaceHolderApiService {
+  MockJsonPlaceHolderApiService() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -81,4 +83,13 @@ class MockPostApiService extends _i1.Mock implements _i2.PostApiService {
         ),
         returnValue: _i3.Future<List<_i8.AlbumModel>>.value(<_i8.AlbumModel>[]),
       ) as _i3.Future<List<_i8.AlbumModel>>);
+
+  @override
+  _i3.Future<List<_i9.User>> getUsers() => (super.noSuchMethod(
+        Invocation.method(
+          #getUsers,
+          [],
+        ),
+        returnValue: _i3.Future<List<_i9.User>>.value(<_i9.User>[]),
+      ) as _i3.Future<List<_i9.User>>);
 }

@@ -19,32 +19,62 @@ mixin _$CombinedEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +137,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
   }) {
     return fetchDataEvent();
   }
@@ -115,6 +150,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
   }) {
     return fetchDataEvent?.call();
   }
@@ -123,6 +163,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
     required TResult orElse(),
   }) {
     if (fetchDataEvent != null) {
@@ -135,6 +180,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
   }) {
     return fetchDataEvent(this);
   }
@@ -143,6 +193,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
   }) {
     return fetchDataEvent?.call(this);
   }
@@ -151,6 +206,11 @@ class _$FetchDataEventImpl implements _FetchDataEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
     required TResult orElse(),
   }) {
     if (fetchDataEvent != null) {
@@ -165,13 +225,858 @@ abstract class _FetchDataEvent implements CombinedEvent {
 }
 
 /// @nodoc
+abstract class _$$SelectUserImplCopyWith<$Res> {
+  factory _$$SelectUserImplCopyWith(
+          _$SelectUserImpl value, $Res Function(_$SelectUserImpl) then) =
+      __$$SelectUserImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({User user});
+
+  $UserCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$$SelectUserImplCopyWithImpl<$Res>
+    extends _$CombinedEventCopyWithImpl<$Res, _$SelectUserImpl>
+    implements _$$SelectUserImplCopyWith<$Res> {
+  __$$SelectUserImplCopyWithImpl(
+      _$SelectUserImpl _value, $Res Function(_$SelectUserImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? user = null,
+  }) {
+    return _then(_$SelectUserImpl(
+      null == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res> get user {
+    return $UserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectUserImpl implements _SelectUser {
+  const _$SelectUserImpl(this.user);
+
+  @override
+  final User user;
+
+  @override
+  String toString() {
+    return 'CombinedEvent.selectUser(user: $user)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectUserImpl &&
+            (identical(other.user, user) || other.user == user));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, user);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectUserImplCopyWith<_$SelectUserImpl> get copyWith =>
+      __$$SelectUserImplCopyWithImpl<_$SelectUserImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
+  }) {
+    return selectUser(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
+  }) {
+    return selectUser?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectUser != null) {
+      return selectUser(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
+  }) {
+    return selectUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
+  }) {
+    return selectUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectUser != null) {
+      return selectUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectUser implements CombinedEvent {
+  const factory _SelectUser(final User user) = _$SelectUserImpl;
+
+  User get user;
+  @JsonKey(ignore: true)
+  _$$SelectUserImplCopyWith<_$SelectUserImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectPostImplCopyWith<$Res> {
+  factory _$$SelectPostImplCopyWith(
+          _$SelectPostImpl value, $Res Function(_$SelectPostImpl) then) =
+      __$$SelectPostImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Post post});
+
+  $PostCopyWith<$Res> get post;
+}
+
+/// @nodoc
+class __$$SelectPostImplCopyWithImpl<$Res>
+    extends _$CombinedEventCopyWithImpl<$Res, _$SelectPostImpl>
+    implements _$$SelectPostImplCopyWith<$Res> {
+  __$$SelectPostImplCopyWithImpl(
+      _$SelectPostImpl _value, $Res Function(_$SelectPostImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? post = null,
+  }) {
+    return _then(_$SelectPostImpl(
+      null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PostCopyWith<$Res> get post {
+    return $PostCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectPostImpl implements _SelectPost {
+  const _$SelectPostImpl(this.post);
+
+  @override
+  final Post post;
+
+  @override
+  String toString() {
+    return 'CombinedEvent.selectPost(post: $post)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectPostImpl &&
+            (identical(other.post, post) || other.post == post));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, post);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectPostImplCopyWith<_$SelectPostImpl> get copyWith =>
+      __$$SelectPostImplCopyWithImpl<_$SelectPostImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
+  }) {
+    return selectPost(post);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
+  }) {
+    return selectPost?.call(post);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectPost != null) {
+      return selectPost(post);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
+  }) {
+    return selectPost(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
+  }) {
+    return selectPost?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectPost != null) {
+      return selectPost(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectPost implements CombinedEvent {
+  const factory _SelectPost(final Post post) = _$SelectPostImpl;
+
+  Post get post;
+  @JsonKey(ignore: true)
+  _$$SelectPostImplCopyWith<_$SelectPostImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectCommentImplCopyWith<$Res> {
+  factory _$$SelectCommentImplCopyWith(
+          _$SelectCommentImpl value, $Res Function(_$SelectCommentImpl) then) =
+      __$$SelectCommentImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CommentModel comment});
+
+  $CommentModelCopyWith<$Res> get comment;
+}
+
+/// @nodoc
+class __$$SelectCommentImplCopyWithImpl<$Res>
+    extends _$CombinedEventCopyWithImpl<$Res, _$SelectCommentImpl>
+    implements _$$SelectCommentImplCopyWith<$Res> {
+  __$$SelectCommentImplCopyWithImpl(
+      _$SelectCommentImpl _value, $Res Function(_$SelectCommentImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? comment = null,
+  }) {
+    return _then(_$SelectCommentImpl(
+      null == comment
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as CommentModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentModelCopyWith<$Res> get comment {
+    return $CommentModelCopyWith<$Res>(_value.comment, (value) {
+      return _then(_value.copyWith(comment: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectCommentImpl implements _SelectComment {
+  const _$SelectCommentImpl(this.comment);
+
+  @override
+  final CommentModel comment;
+
+  @override
+  String toString() {
+    return 'CombinedEvent.selectComment(comment: $comment)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectCommentImpl &&
+            (identical(other.comment, comment) || other.comment == comment));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, comment);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectCommentImplCopyWith<_$SelectCommentImpl> get copyWith =>
+      __$$SelectCommentImplCopyWithImpl<_$SelectCommentImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
+  }) {
+    return selectComment(comment);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
+  }) {
+    return selectComment?.call(comment);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectComment != null) {
+      return selectComment(comment);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
+  }) {
+    return selectComment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
+  }) {
+    return selectComment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectComment != null) {
+      return selectComment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectComment implements CombinedEvent {
+  const factory _SelectComment(final CommentModel comment) =
+      _$SelectCommentImpl;
+
+  CommentModel get comment;
+  @JsonKey(ignore: true)
+  _$$SelectCommentImplCopyWith<_$SelectCommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectAlbumImplCopyWith<$Res> {
+  factory _$$SelectAlbumImplCopyWith(
+          _$SelectAlbumImpl value, $Res Function(_$SelectAlbumImpl) then) =
+      __$$SelectAlbumImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AlbumModel album});
+
+  $AlbumModelCopyWith<$Res> get album;
+}
+
+/// @nodoc
+class __$$SelectAlbumImplCopyWithImpl<$Res>
+    extends _$CombinedEventCopyWithImpl<$Res, _$SelectAlbumImpl>
+    implements _$$SelectAlbumImplCopyWith<$Res> {
+  __$$SelectAlbumImplCopyWithImpl(
+      _$SelectAlbumImpl _value, $Res Function(_$SelectAlbumImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? album = null,
+  }) {
+    return _then(_$SelectAlbumImpl(
+      null == album
+          ? _value.album
+          : album // ignore: cast_nullable_to_non_nullable
+              as AlbumModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlbumModelCopyWith<$Res> get album {
+    return $AlbumModelCopyWith<$Res>(_value.album, (value) {
+      return _then(_value.copyWith(album: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectAlbumImpl implements _SelectAlbum {
+  const _$SelectAlbumImpl(this.album);
+
+  @override
+  final AlbumModel album;
+
+  @override
+  String toString() {
+    return 'CombinedEvent.selectAlbum(album: $album)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectAlbumImpl &&
+            (identical(other.album, album) || other.album == album));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, album);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectAlbumImplCopyWith<_$SelectAlbumImpl> get copyWith =>
+      __$$SelectAlbumImplCopyWithImpl<_$SelectAlbumImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
+  }) {
+    return selectAlbum(album);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
+  }) {
+    return selectAlbum?.call(album);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectAlbum != null) {
+      return selectAlbum(album);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
+  }) {
+    return selectAlbum(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
+  }) {
+    return selectAlbum?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectAlbum != null) {
+      return selectAlbum(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectAlbum implements CombinedEvent {
+  const factory _SelectAlbum(final AlbumModel album) = _$SelectAlbumImpl;
+
+  AlbumModel get album;
+  @JsonKey(ignore: true)
+  _$$SelectAlbumImplCopyWith<_$SelectAlbumImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectPhotoImplCopyWith<$Res> {
+  factory _$$SelectPhotoImplCopyWith(
+          _$SelectPhotoImpl value, $Res Function(_$SelectPhotoImpl) then) =
+      __$$SelectPhotoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Photo photo});
+
+  $PhotoCopyWith<$Res> get photo;
+}
+
+/// @nodoc
+class __$$SelectPhotoImplCopyWithImpl<$Res>
+    extends _$CombinedEventCopyWithImpl<$Res, _$SelectPhotoImpl>
+    implements _$$SelectPhotoImplCopyWith<$Res> {
+  __$$SelectPhotoImplCopyWithImpl(
+      _$SelectPhotoImpl _value, $Res Function(_$SelectPhotoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? photo = null,
+  }) {
+    return _then(_$SelectPhotoImpl(
+      null == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as Photo,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PhotoCopyWith<$Res> get photo {
+    return $PhotoCopyWith<$Res>(_value.photo, (value) {
+      return _then(_value.copyWith(photo: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$SelectPhotoImpl implements _SelectPhoto {
+  const _$SelectPhotoImpl(this.photo);
+
+  @override
+  final Photo photo;
+
+  @override
+  String toString() {
+    return 'CombinedEvent.selectPhoto(photo: $photo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectPhotoImpl &&
+            (identical(other.photo, photo) || other.photo == photo));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, photo);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectPhotoImplCopyWith<_$SelectPhotoImpl> get copyWith =>
+      __$$SelectPhotoImplCopyWithImpl<_$SelectPhotoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchDataEvent,
+    required TResult Function(User user) selectUser,
+    required TResult Function(Post post) selectPost,
+    required TResult Function(CommentModel comment) selectComment,
+    required TResult Function(AlbumModel album) selectAlbum,
+    required TResult Function(Photo photo) selectPhoto,
+  }) {
+    return selectPhoto(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchDataEvent,
+    TResult? Function(User user)? selectUser,
+    TResult? Function(Post post)? selectPost,
+    TResult? Function(CommentModel comment)? selectComment,
+    TResult? Function(AlbumModel album)? selectAlbum,
+    TResult? Function(Photo photo)? selectPhoto,
+  }) {
+    return selectPhoto?.call(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchDataEvent,
+    TResult Function(User user)? selectUser,
+    TResult Function(Post post)? selectPost,
+    TResult Function(CommentModel comment)? selectComment,
+    TResult Function(AlbumModel album)? selectAlbum,
+    TResult Function(Photo photo)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectPhoto != null) {
+      return selectPhoto(photo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchDataEvent value) fetchDataEvent,
+    required TResult Function(_SelectUser value) selectUser,
+    required TResult Function(_SelectPost value) selectPost,
+    required TResult Function(_SelectComment value) selectComment,
+    required TResult Function(_SelectAlbum value) selectAlbum,
+    required TResult Function(_SelectPhoto value) selectPhoto,
+  }) {
+    return selectPhoto(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult? Function(_SelectUser value)? selectUser,
+    TResult? Function(_SelectPost value)? selectPost,
+    TResult? Function(_SelectComment value)? selectComment,
+    TResult? Function(_SelectAlbum value)? selectAlbum,
+    TResult? Function(_SelectPhoto value)? selectPhoto,
+  }) {
+    return selectPhoto?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchDataEvent value)? fetchDataEvent,
+    TResult Function(_SelectUser value)? selectUser,
+    TResult Function(_SelectPost value)? selectPost,
+    TResult Function(_SelectComment value)? selectComment,
+    TResult Function(_SelectAlbum value)? selectAlbum,
+    TResult Function(_SelectPhoto value)? selectPhoto,
+    required TResult orElse(),
+  }) {
+    if (selectPhoto != null) {
+      return selectPhoto(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SelectPhoto implements CombinedEvent {
+  const factory _SelectPhoto(final Photo photo) = _$SelectPhotoImpl;
+
+  Photo get photo;
+  @JsonKey(ignore: true)
+  _$$SelectPhotoImplCopyWith<_$SelectPhotoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CombinedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)
+    required TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)
         loaded,
     required TResult Function(String message) error,
   }) =>
@@ -180,8 +1085,17 @@ mixin _$CombinedState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult? Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult? Function(String message)? error,
   }) =>
@@ -190,8 +1104,17 @@ mixin _$CombinedState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -282,8 +1205,17 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)
+    required TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -295,8 +1227,17 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult? Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -308,8 +1249,17 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -402,8 +1352,17 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)
+    required TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -415,8 +1374,17 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult? Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -428,8 +1396,17 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -489,7 +1466,22 @@ abstract class _$$LoadedImplCopyWith<$Res> {
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
-      {List<CommentModel> comments, List<Post> posts, List<AlbumModel> album});
+      {List<User> users,
+      List<Photo> photos,
+      List<Post> posts,
+      List<CommentModel> comments,
+      List<AlbumModel> albums,
+      User? selectedUser,
+      Post? selectedPost,
+      CommentModel? selectedComment,
+      AlbumModel? selectedAlbum,
+      Photo? selectedPhoto});
+
+  $UserCopyWith<$Res>? get selectedUser;
+  $PostCopyWith<$Res>? get selectedPost;
+  $CommentModelCopyWith<$Res>? get selectedComment;
+  $AlbumModelCopyWith<$Res>? get selectedAlbum;
+  $PhotoCopyWith<$Res>? get selectedPhoto;
 }
 
 /// @nodoc
@@ -503,42 +1495,156 @@ class __$$LoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? comments = null,
+    Object? users = null,
+    Object? photos = null,
     Object? posts = null,
-    Object? album = null,
+    Object? comments = null,
+    Object? albums = null,
+    Object? selectedUser = freezed,
+    Object? selectedPost = freezed,
+    Object? selectedComment = freezed,
+    Object? selectedAlbum = freezed,
+    Object? selectedPhoto = freezed,
   }) {
     return _then(_$LoadedImpl(
-      null == comments
-          ? _value._comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as List<CommentModel>,
-      null == posts
+      users: null == users
+          ? _value._users
+          : users // ignore: cast_nullable_to_non_nullable
+              as List<User>,
+      photos: null == photos
+          ? _value._photos
+          : photos // ignore: cast_nullable_to_non_nullable
+              as List<Photo>,
+      posts: null == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<Post>,
-      null == album
-          ? _value._album
-          : album // ignore: cast_nullable_to_non_nullable
+      comments: null == comments
+          ? _value._comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as List<CommentModel>,
+      albums: null == albums
+          ? _value._albums
+          : albums // ignore: cast_nullable_to_non_nullable
               as List<AlbumModel>,
+      selectedUser: freezed == selectedUser
+          ? _value.selectedUser
+          : selectedUser // ignore: cast_nullable_to_non_nullable
+              as User?,
+      selectedPost: freezed == selectedPost
+          ? _value.selectedPost
+          : selectedPost // ignore: cast_nullable_to_non_nullable
+              as Post?,
+      selectedComment: freezed == selectedComment
+          ? _value.selectedComment
+          : selectedComment // ignore: cast_nullable_to_non_nullable
+              as CommentModel?,
+      selectedAlbum: freezed == selectedAlbum
+          ? _value.selectedAlbum
+          : selectedAlbum // ignore: cast_nullable_to_non_nullable
+              as AlbumModel?,
+      selectedPhoto: freezed == selectedPhoto
+          ? _value.selectedPhoto
+          : selectedPhoto // ignore: cast_nullable_to_non_nullable
+              as Photo?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res>? get selectedUser {
+    if (_value.selectedUser == null) {
+      return null;
+    }
+
+    return $UserCopyWith<$Res>(_value.selectedUser!, (value) {
+      return _then(_value.copyWith(selectedUser: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PostCopyWith<$Res>? get selectedPost {
+    if (_value.selectedPost == null) {
+      return null;
+    }
+
+    return $PostCopyWith<$Res>(_value.selectedPost!, (value) {
+      return _then(_value.copyWith(selectedPost: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentModelCopyWith<$Res>? get selectedComment {
+    if (_value.selectedComment == null) {
+      return null;
+    }
+
+    return $CommentModelCopyWith<$Res>(_value.selectedComment!, (value) {
+      return _then(_value.copyWith(selectedComment: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlbumModelCopyWith<$Res>? get selectedAlbum {
+    if (_value.selectedAlbum == null) {
+      return null;
+    }
+
+    return $AlbumModelCopyWith<$Res>(_value.selectedAlbum!, (value) {
+      return _then(_value.copyWith(selectedAlbum: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PhotoCopyWith<$Res>? get selectedPhoto {
+    if (_value.selectedPhoto == null) {
+      return null;
+    }
+
+    return $PhotoCopyWith<$Res>(_value.selectedPhoto!, (value) {
+      return _then(_value.copyWith(selectedPhoto: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl(final List<CommentModel> comments, final List<Post> posts,
-      final List<AlbumModel> album)
-      : _comments = comments,
+  const _$LoadedImpl(
+      {required final List<User> users,
+      required final List<Photo> photos,
+      required final List<Post> posts,
+      required final List<CommentModel> comments,
+      required final List<AlbumModel> albums,
+      this.selectedUser,
+      this.selectedPost,
+      this.selectedComment,
+      this.selectedAlbum,
+      this.selectedPhoto})
+      : _users = users,
+        _photos = photos,
         _posts = posts,
-        _album = album;
+        _comments = comments,
+        _albums = albums;
 
-  final List<CommentModel> _comments;
+  final List<User> _users;
   @override
-  List<CommentModel> get comments {
-    if (_comments is EqualUnmodifiableListView) return _comments;
+  List<User> get users {
+    if (_users is EqualUnmodifiableListView) return _users;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_comments);
+    return EqualUnmodifiableListView(_users);
+  }
+
+  final List<Photo> _photos;
+  @override
+  List<Photo> get photos {
+    if (_photos is EqualUnmodifiableListView) return _photos;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_photos);
   }
 
   final List<Post> _posts;
@@ -549,17 +1655,36 @@ class _$LoadedImpl implements _Loaded {
     return EqualUnmodifiableListView(_posts);
   }
 
-  final List<AlbumModel> _album;
+  final List<CommentModel> _comments;
   @override
-  List<AlbumModel> get album {
-    if (_album is EqualUnmodifiableListView) return _album;
+  List<CommentModel> get comments {
+    if (_comments is EqualUnmodifiableListView) return _comments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_album);
+    return EqualUnmodifiableListView(_comments);
+  }
+
+  final List<AlbumModel> _albums;
+  @override
+  List<AlbumModel> get albums {
+    if (_albums is EqualUnmodifiableListView) return _albums;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_albums);
   }
 
   @override
+  final User? selectedUser;
+  @override
+  final Post? selectedPost;
+  @override
+  final CommentModel? selectedComment;
+  @override
+  final AlbumModel? selectedAlbum;
+  @override
+  final Photo? selectedPhoto;
+
+  @override
   String toString() {
-    return 'CombinedState.loaded(comments: $comments, posts: $posts, album: $album)';
+    return 'CombinedState.loaded(users: $users, photos: $photos, posts: $posts, comments: $comments, albums: $albums, selectedUser: $selectedUser, selectedPost: $selectedPost, selectedComment: $selectedComment, selectedAlbum: $selectedAlbum, selectedPhoto: $selectedPhoto)';
   }
 
   @override
@@ -567,17 +1692,36 @@ class _$LoadedImpl implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
-            const DeepCollectionEquality().equals(other._comments, _comments) &&
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            const DeepCollectionEquality().equals(other._photos, _photos) &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
-            const DeepCollectionEquality().equals(other._album, _album));
+            const DeepCollectionEquality().equals(other._comments, _comments) &&
+            const DeepCollectionEquality().equals(other._albums, _albums) &&
+            (identical(other.selectedUser, selectedUser) ||
+                other.selectedUser == selectedUser) &&
+            (identical(other.selectedPost, selectedPost) ||
+                other.selectedPost == selectedPost) &&
+            (identical(other.selectedComment, selectedComment) ||
+                other.selectedComment == selectedComment) &&
+            (identical(other.selectedAlbum, selectedAlbum) ||
+                other.selectedAlbum == selectedAlbum) &&
+            (identical(other.selectedPhoto, selectedPhoto) ||
+                other.selectedPhoto == selectedPhoto));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_comments),
+      const DeepCollectionEquality().hash(_users),
+      const DeepCollectionEquality().hash(_photos),
       const DeepCollectionEquality().hash(_posts),
-      const DeepCollectionEquality().hash(_album));
+      const DeepCollectionEquality().hash(_comments),
+      const DeepCollectionEquality().hash(_albums),
+      selectedUser,
+      selectedPost,
+      selectedComment,
+      selectedAlbum,
+      selectedPhoto);
 
   @JsonKey(ignore: true)
   @override
@@ -590,12 +1734,22 @@ class _$LoadedImpl implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)
+    required TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)
         loaded,
     required TResult Function(String message) error,
   }) {
-    return loaded(comments, posts, album);
+    return loaded(users, photos, posts, comments, albums, selectedUser,
+        selectedPost, selectedComment, selectedAlbum, selectedPhoto);
   }
 
   @override
@@ -603,12 +1757,22 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult? Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult? Function(String message)? error,
   }) {
-    return loaded?.call(comments, posts, album);
+    return loaded?.call(users, photos, posts, comments, albums, selectedUser,
+        selectedPost, selectedComment, selectedAlbum, selectedPhoto);
   }
 
   @override
@@ -616,14 +1780,24 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(comments, posts, album);
+      return loaded(users, photos, posts, comments, albums, selectedUser,
+          selectedPost, selectedComment, selectedAlbum, selectedPhoto);
     }
     return orElse();
   }
@@ -667,12 +1841,28 @@ class _$LoadedImpl implements _Loaded {
 }
 
 abstract class _Loaded implements CombinedState {
-  const factory _Loaded(final List<CommentModel> comments,
-      final List<Post> posts, final List<AlbumModel> album) = _$LoadedImpl;
+  const factory _Loaded(
+      {required final List<User> users,
+      required final List<Photo> photos,
+      required final List<Post> posts,
+      required final List<CommentModel> comments,
+      required final List<AlbumModel> albums,
+      final User? selectedUser,
+      final Post? selectedPost,
+      final CommentModel? selectedComment,
+      final AlbumModel? selectedAlbum,
+      final Photo? selectedPhoto}) = _$LoadedImpl;
 
-  List<CommentModel> get comments;
+  List<User> get users;
+  List<Photo> get photos;
   List<Post> get posts;
-  List<AlbumModel> get album;
+  List<CommentModel> get comments;
+  List<AlbumModel> get albums;
+  User? get selectedUser;
+  Post? get selectedPost;
+  CommentModel? get selectedComment;
+  AlbumModel? get selectedAlbum;
+  Photo? get selectedPhoto;
   @JsonKey(ignore: true)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -744,8 +1934,17 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)
+    required TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -757,8 +1956,17 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult? Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -770,8 +1978,17 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CommentModel> comments, List<Post> posts,
-            List<AlbumModel> album)?
+    TResult Function(
+            List<User> users,
+            List<Photo> photos,
+            List<Post> posts,
+            List<CommentModel> comments,
+            List<AlbumModel> albums,
+            User? selectedUser,
+            Post? selectedPost,
+            CommentModel? selectedComment,
+            AlbumModel? selectedAlbum,
+            Photo? selectedPhoto)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
