@@ -1,13 +1,17 @@
 import 'package:bloc_rxdart/src/config/router/navigation_service.dart';
+import 'package:bloc_rxdart/src/data/datasources/remote/movie_api.dart/movie_api.dart';
 import 'package:bloc_rxdart/src/data/repositories/album_repository_imple.dart';
 import 'package:bloc_rxdart/src/data/repositories/comment_repository_impl.dart';
+import 'package:bloc_rxdart/src/data/repositories/movie_repository_imple.dart';
 import 'package:bloc_rxdart/src/data/repositories/todos_repository_impl.dart';
 import 'package:bloc_rxdart/src/data/repositories/user_repository_impl.dart';
 import 'package:bloc_rxdart/src/domain/repositories/album_repository.dart';
 import 'package:bloc_rxdart/src/domain/repositories/comment_repository.dart';
+import 'package:bloc_rxdart/src/domain/repositories/movie_repository.dart';
 import 'package:bloc_rxdart/src/domain/repositories/todos_repository.dart';
 import 'package:bloc_rxdart/src/domain/repositories/user_repository.dart';
 import 'package:bloc_rxdart/src/presentation/blocs/combined/combined_bloc.dart';
+import 'package:bloc_rxdart/src/presentation/blocs/movie/movie_bloc.dart';
 import 'package:bloc_rxdart/src/presentation/blocs/todos/todos_bloc.dart';
 import 'package:bloc_rxdart/src/presentation/blocs/user/user_bloc.dart';
 import 'package:bloc_rxdart/src/utils/network/dio_factory.dart';
@@ -48,6 +52,11 @@ Future<void> setupDependencies() async {
   final dummyApiDio = await DioFactory.getDio(baseUrl: "https://dummyjson.com");
   getIt.registerLazySingleton(() => DummyJsonApiService(dummyApiDio));
 
+  //API MOVIE
+  final movieApiDio =
+      await DioFactory.getDio(baseUrl: "https://www.episodate.com");
+  getIt.registerLazySingleton(() => MovieApi(movieApiDio));
+
   //Đăng kí Repositories
   getIt.registerLazySingleton<PostRepository>(
       () => PostRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
@@ -69,6 +78,10 @@ Future<void> setupDependencies() async {
   getIt.registerLazySingleton<UserRepository>(
       () => UserRepositoryImpl(getIt<JsonPlaceHolderApiService>()));
 
+  //Movies
+  getIt.registerLazySingleton<MovieRepository>(
+      () => MovieRepositoryImple(getIt<MovieApi>()));
+
   //Đăng kí Blocs
   getIt.registerFactory(() => PostBloc(getIt<PostRepository>()));
   getIt.registerFactory(() => PhotoBloc(getIt<PhotoRepository>()));
@@ -82,6 +95,10 @@ Future<void> setupDependencies() async {
         getIt<PhotoRepository>(),
       ));
   getIt.registerFactory(() => UserBloc(getIt<UserRepository>()));
+
+  //movieBloc
+  getIt.registerFactory(
+      () => MovieBloc(movieRepository: getIt<MovieRepository>()));
 }
 
 //! Sử dụng với một baseUrl khác

@@ -26,8 +26,12 @@ mixin _$Photo {
   String get url => throw _privateConstructorUsedError;
   String get thumbnailUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this Photo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Photo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PhotoCopyWith<Photo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -50,6 +54,8 @@ class _$PhotoCopyWithImpl<$Res, $Val extends Photo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Photo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$PhotoImplCopyWithImpl<$Res>
       _$PhotoImpl _value, $Res Function(_$PhotoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Photo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,12 +187,14 @@ class _$PhotoImpl implements _Photo {
                 other.thumbnailUrl == thumbnailUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, albumId, id, title, url, thumbnailUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Photo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PhotoImplCopyWith<_$PhotoImpl> get copyWith =>
@@ -218,8 +228,11 @@ abstract class _Photo implements Photo {
   String get url;
   @override
   String get thumbnailUrl;
+
+  /// Create a copy of Photo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PhotoImplCopyWith<_$PhotoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -25,8 +25,12 @@ mixin _$TodosModel {
   String get title => throw _privateConstructorUsedError;
   bool get completed => throw _privateConstructorUsedError;
 
+  /// Serializes this TodosModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TodosModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TodosModelCopyWith<TodosModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$TodosModelCopyWithImpl<$Res, $Val extends TodosModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TodosModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$TodosModelImplCopyWithImpl<$Res>
       _$TodosModelImpl _value, $Res Function(_$TodosModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TodosModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,11 +173,13 @@ class _$TodosModelImpl implements _TodosModel {
                 other.completed == completed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, userId, id, title, completed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TodosModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TodosModelImplCopyWith<_$TodosModelImpl> get copyWith =>
@@ -201,8 +211,11 @@ abstract class _TodosModel implements TodosModel {
   String get title;
   @override
   bool get completed;
+
+  /// Create a copy of TodosModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TodosModelImplCopyWith<_$TodosModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

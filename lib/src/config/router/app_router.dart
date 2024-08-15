@@ -1,3 +1,4 @@
+import 'package:bloc_rxdart/src/presentation/pages/movie/movie_screen.dart';
 import 'package:bloc_rxdart/src/presentation/pages/user/user_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -40,6 +41,10 @@ class AppRoutes {
         GoRoute(
           path: 'user',
           builder: (context, state) => const UserListScreen(),
+        ),
+        GoRoute(
+          path: 'movie',
+          builder: (context, state) => const MovieScreen(),
         ),
       ],
     ),

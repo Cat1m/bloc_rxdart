@@ -29,8 +29,12 @@ mixin _$User {
   String get website => throw _privateConstructorUsedError;
   CompanyModel get company => throw _privateConstructorUsedError;
 
+  /// Serializes this User to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -63,6 +67,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +117,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     ) as $Val);
   }
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressModelCopyWith<$Res> get address {
@@ -119,6 +127,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     });
   }
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CompanyModelCopyWith<$Res> get company {
@@ -158,6 +168,8 @@ class __$$UserImplCopyWithImpl<$Res>
   __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -267,12 +279,14 @@ class _$UserImpl implements _User {
             (identical(other.company, company) || other.company == company));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, name, username, email, address, phone, website, company);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserImplCopyWith<_$UserImpl> get copyWith =>
@@ -315,8 +329,11 @@ abstract class _User implements User {
   String get website;
   @override
   CompanyModel get company;
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserImplCopyWith<_$UserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -333,8 +350,12 @@ mixin _$AddressModel {
   String get zipcode => throw _privateConstructorUsedError;
   GeoModel get geo => throw _privateConstructorUsedError;
 
+  /// Serializes this AddressModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddressModelCopyWith<AddressModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -361,6 +382,8 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -394,6 +417,8 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
     ) as $Val);
   }
 
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GeoModelCopyWith<$Res> get geo {
@@ -426,6 +451,8 @@ class __$$AddressModelImplCopyWithImpl<$Res>
       _$AddressModelImpl _value, $Res Function(_$AddressModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -505,12 +532,14 @@ class _$AddressModelImpl implements _AddressModel {
             (identical(other.geo, geo) || other.geo == geo));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, street, suite, city, zipcode, geo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddressModelImplCopyWith<_$AddressModelImpl> get copyWith =>
@@ -545,8 +574,11 @@ abstract class _AddressModel implements AddressModel {
   String get zipcode;
   @override
   GeoModel get geo;
+
+  /// Create a copy of AddressModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddressModelImplCopyWith<_$AddressModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -560,8 +592,12 @@ mixin _$GeoModel {
   String get lat => throw _privateConstructorUsedError;
   String get lng => throw _privateConstructorUsedError;
 
+  /// Serializes this GeoModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GeoModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GeoModelCopyWith<GeoModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -584,6 +620,8 @@ class _$GeoModelCopyWithImpl<$Res, $Val extends GeoModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GeoModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -622,6 +660,8 @@ class __$$GeoModelImplCopyWithImpl<$Res>
       _$GeoModelImpl _value, $Res Function(_$GeoModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GeoModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -670,11 +710,13 @@ class _$GeoModelImpl implements _GeoModel {
             (identical(other.lng, lng) || other.lng == lng));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, lat, lng);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GeoModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GeoModelImplCopyWith<_$GeoModelImpl> get copyWith =>
@@ -698,8 +740,11 @@ abstract class _GeoModel implements GeoModel {
   String get lat;
   @override
   String get lng;
+
+  /// Create a copy of GeoModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GeoModelImplCopyWith<_$GeoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -714,8 +759,12 @@ mixin _$CompanyModel {
   String get catchPhrase => throw _privateConstructorUsedError;
   String get bs => throw _privateConstructorUsedError;
 
+  /// Serializes this CompanyModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CompanyModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CompanyModelCopyWith<CompanyModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -739,6 +788,8 @@ class _$CompanyModelCopyWithImpl<$Res, $Val extends CompanyModel>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CompanyModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -782,6 +833,8 @@ class __$$CompanyModelImplCopyWithImpl<$Res>
       _$CompanyModelImpl _value, $Res Function(_$CompanyModelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CompanyModel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -840,11 +893,13 @@ class _$CompanyModelImpl implements _CompanyModel {
             (identical(other.bs, bs) || other.bs == bs));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, catchPhrase, bs);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CompanyModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CompanyModelImplCopyWith<_$CompanyModelImpl> get copyWith =>
@@ -873,8 +928,11 @@ abstract class _CompanyModel implements CompanyModel {
   String get catchPhrase;
   @override
   String get bs;
+
+  /// Create a copy of CompanyModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CompanyModelImplCopyWith<_$CompanyModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,6 +29,7 @@ dependencies:
   # đổi BundleId: rename setBundleId --targets android --value "com.example.bundleId"
   rename: ^3.0.2
   cached_network_image: ^3.4.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

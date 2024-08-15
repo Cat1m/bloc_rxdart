@@ -96,6 +96,9 @@ class _$CombinedEventCopyWithImpl<$Res, $Val extends CombinedEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -112,6 +115,9 @@ class __$$FetchDataEventImplCopyWithImpl<$Res>
   __$$FetchDataEventImplCopyWithImpl(
       _$FetchDataEventImpl _value, $Res Function(_$FetchDataEventImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -243,6 +249,8 @@ class __$$SelectUserImplCopyWithImpl<$Res>
       _$SelectUserImpl _value, $Res Function(_$SelectUserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -256,6 +264,8 @@ class __$$SelectUserImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res> get user {
@@ -289,7 +299,9 @@ class _$SelectUserImpl implements _SelectUser {
   @override
   int get hashCode => Object.hash(runtimeType, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectUserImplCopyWith<_$SelectUserImpl> get copyWith =>
@@ -386,7 +398,10 @@ abstract class _SelectUser implements CombinedEvent {
   const factory _SelectUser(final User user) = _$SelectUserImpl;
 
   User get user;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectUserImplCopyWith<_$SelectUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -410,6 +425,8 @@ class __$$SelectPostImplCopyWithImpl<$Res>
       _$SelectPostImpl _value, $Res Function(_$SelectPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -423,6 +440,8 @@ class __$$SelectPostImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -456,7 +475,9 @@ class _$SelectPostImpl implements _SelectPost {
   @override
   int get hashCode => Object.hash(runtimeType, post);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectPostImplCopyWith<_$SelectPostImpl> get copyWith =>
@@ -553,7 +574,10 @@ abstract class _SelectPost implements CombinedEvent {
   const factory _SelectPost(final Post post) = _$SelectPostImpl;
 
   Post get post;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectPostImplCopyWith<_$SelectPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -577,6 +601,8 @@ class __$$SelectCommentImplCopyWithImpl<$Res>
       _$SelectCommentImpl _value, $Res Function(_$SelectCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -590,6 +616,8 @@ class __$$SelectCommentImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentModelCopyWith<$Res> get comment {
@@ -623,7 +651,9 @@ class _$SelectCommentImpl implements _SelectComment {
   @override
   int get hashCode => Object.hash(runtimeType, comment);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectCommentImplCopyWith<_$SelectCommentImpl> get copyWith =>
@@ -721,7 +751,10 @@ abstract class _SelectComment implements CombinedEvent {
       _$SelectCommentImpl;
 
   CommentModel get comment;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectCommentImplCopyWith<_$SelectCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -745,6 +778,8 @@ class __$$SelectAlbumImplCopyWithImpl<$Res>
       _$SelectAlbumImpl _value, $Res Function(_$SelectAlbumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -758,6 +793,8 @@ class __$$SelectAlbumImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumModelCopyWith<$Res> get album {
@@ -791,7 +828,9 @@ class _$SelectAlbumImpl implements _SelectAlbum {
   @override
   int get hashCode => Object.hash(runtimeType, album);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectAlbumImplCopyWith<_$SelectAlbumImpl> get copyWith =>
@@ -888,7 +927,10 @@ abstract class _SelectAlbum implements CombinedEvent {
   const factory _SelectAlbum(final AlbumModel album) = _$SelectAlbumImpl;
 
   AlbumModel get album;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectAlbumImplCopyWith<_$SelectAlbumImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -912,6 +954,8 @@ class __$$SelectPhotoImplCopyWithImpl<$Res>
       _$SelectPhotoImpl _value, $Res Function(_$SelectPhotoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -925,6 +969,8 @@ class __$$SelectPhotoImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PhotoCopyWith<$Res> get photo {
@@ -958,7 +1004,9 @@ class _$SelectPhotoImpl implements _SelectPhoto {
   @override
   int get hashCode => Object.hash(runtimeType, photo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectPhotoImplCopyWith<_$SelectPhotoImpl> get copyWith =>
@@ -1055,7 +1103,10 @@ abstract class _SelectPhoto implements CombinedEvent {
   const factory _SelectPhoto(final Photo photo) = _$SelectPhotoImpl;
 
   Photo get photo;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectPhotoImplCopyWith<_$SelectPhotoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1163,6 +1214,9 @@ class _$CombinedStateCopyWithImpl<$Res, $Val extends CombinedState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1179,6 +1233,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1326,6 +1383,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1492,6 +1552,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1550,6 +1612,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res>? get selectedUser {
@@ -1562,6 +1626,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res>? get selectedPost {
@@ -1574,6 +1640,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentModelCopyWith<$Res>? get selectedComment {
@@ -1586,6 +1654,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumModelCopyWith<$Res>? get selectedAlbum {
@@ -1598,6 +1668,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PhotoCopyWith<$Res>? get selectedPhoto {
@@ -1723,7 +1795,9 @@ class _$LoadedImpl implements _Loaded {
       selectedAlbum,
       selectedPhoto);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -1863,7 +1937,10 @@ abstract class _Loaded implements CombinedState {
   CommentModel? get selectedComment;
   AlbumModel? get selectedAlbum;
   Photo? get selectedPhoto;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1885,6 +1962,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1923,7 +2002,9 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -2041,7 +2122,10 @@ abstract class _Error implements CombinedState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CombinedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
